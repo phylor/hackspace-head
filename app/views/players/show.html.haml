@@ -1,5 +1,6 @@
 %h2 
   = @player.name
+  = image_tag @player.photo.url(width: 300)
 
 - @player.rankings.each do |ranking|
   %div
