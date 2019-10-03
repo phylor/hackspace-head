@@ -1,0 +1,6 @@
+%h2 
+  = @player.name
+
+- @player.rankings.each do |ranking|
+  %div
+    = "#{ranking.month}: #{ranking.ranking}"
