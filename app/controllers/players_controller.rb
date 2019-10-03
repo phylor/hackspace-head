@@ -4,11 +4,11 @@ class PlayersController < ApplicationController
   end
 
   def show
-    @player = client.entry('SMDbocMBVCITPhfI4OG0m', content_type: 'monthlyRanking', include: 1)
+    @player = client.entry(params[:id], content_type: 'monthlyRanking', include: 1)
   end
 
   private
-  
+
   def client
     Contentful::Client.new(
       space: 'xgf5e7365iv2',

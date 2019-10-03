@@ -2,4 +2,4 @@ Hallo Spieler!
 
 - @players.each do |player|
   %div
-    = player.id
+    = link_to player.name, player_path(player.id)
